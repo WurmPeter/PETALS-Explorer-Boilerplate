@@ -1,0 +1,24 @@
+<section>
+  <table class="max-w-5xl mx-auto table-auto">
+    <thead class="justify-between">
+      <tr class="bg-gray-500">
+      {#for header_col <- Explorer.DataFrame.names(@table)}
+        <th class="px-3 py-2 text-gray-100 font-semibold">
+          {header_col}
+        </th>
+      {/for}
+      </tr>
+    </thead>
+    <tbody class="bg-gray-200">
+    {#for row_number <- 0..Explorer.DataFrame.n_rows(@table)-1}
+      <tr class="bg-white border-b-2 border-gray-200">
+      {#for col_number <- 0..Explorer.DataFrame.n_cols(@table)-1}
+        <td class="px-3 py-2">
+          {@table[Enum.at(Explorer.DataFrame.names(@table), col_number)][row_number]}
+        </td>
+      {/for}
+      </tr>
+    {/for}
+    </tbody>
+  </table>
+</section>

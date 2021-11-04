@@ -1,0 +1,17 @@
+<section>
+  <h1><%= gettext("Welcome to %{name}!", name: "Phoenix") %></h1>
+  <p class="italic">
+    <%= gettext("Peace of mind from prototype to production") %>
+  </p>
+</section>
+
+<div class="flex space-x-8">
+  <div>This div</div>
+  <div>and this div</div>
+  <div>and this div are now all evenly spaced between them</div>
+  <div>on the x (this one too).</div>
+</div>
+
+<section class="text-blue-500 text-center p-5">
+  <p x-data="{message: 'AlpineJS works!'}" x-text="message">Doesn't work</p>
+</section>

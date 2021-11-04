@@ -1,0 +1,205 @@
+## This file is a PO Template file.
+##
+## "msgid"s here are often extracted from source code.
+## Add new translations manually only if they're dynamic
+## translations that can't be statically extracted.
+##
+## Run "mix gettext.extract" to bring this file up to
+## date. Leave "msgstr"s empty as changing them here as no
+## effect: edit them in PO (.po) files instead.
+msgid ""
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/page/index.html.heex:2
+msgid "Welcome to %{name}!"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/page/index.html.heex:3
+msgid "Peace of mind from prototype to production"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/layout/root.html.heex:47
+#: lib/petal_web/templates/layout/root.html.heex:78
+msgid "Log out"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/layout/root.html.heex:51
+#: lib/petal_web/templates/layout/root.html.heex:80 lib/petal_web/templates/user_registration/new.html.heex:25
+#: lib/petal_web/templates/user_reset_password/new.html.heex:15 lib/petal_web/templates/user_session/new.html.heex:2
+#: lib/petal_web/templates/user_session/new.html.heex:23
+msgid "Log in"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/layout/root.html.heex:53
+#: lib/petal_web/templates/layout/root.html.heex:81 lib/petal_web/templates/user_registration/new.html.heex:2
+#: lib/petal_web/templates/user_registration/new.html.heex:20 lib/petal_web/templates/user_reset_password/new.html.heex:14
+#: lib/petal_web/templates/user_session/new.html.heex:28
+msgid "Register"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_registration/new.html.heex:11
+#: lib/petal_web/templates/user_reset_password/new.html.heex:5 lib/petal_web/templates/user_session/new.html.heex:11
+#: lib/petal_web/templates/user_settings/edit.html.heex:15
+msgid "Email"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_registration/new.html.heex:26
+#: lib/petal_web/templates/user_reset_password/new.html.heex:2 lib/petal_web/templates/user_session/new.html.heex:29
+msgid "Forgot your password?"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_session/new.html.heex:19
+msgid "Keep me logged in for 60 days"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_registration/new.html.heex:15
+#: lib/petal_web/templates/user_session/new.html.heex:14
+msgid "Password"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_settings/edit.html.heex:4
+#: lib/petal_web/templates/user_settings/edit.html.heex:24
+msgid "Change email"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_settings/edit.html.heex:28
+#: lib/petal_web/templates/user_settings/edit.html.heex:52
+msgid "Change password"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_reset_password/edit.html.heex:15
+#: lib/petal_web/templates/user_settings/edit.html.heex:43
+msgid "Confirm new password"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_settings/edit.html.heex:19
+#: lib/petal_web/templates/user_settings/edit.html.heex:47
+msgid "Current password"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/layout/root.html.heex:30
+#: lib/petal_web/templates/layout/root.html.heex:71
+msgid "Features"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_reset_password/edit.html.heex:11
+#: lib/petal_web/templates/user_settings/edit.html.heex:39
+msgid "New password"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/layout/root.html.heex:31
+#: lib/petal_web/templates/layout/root.html.heex:72
+msgid "Pricing"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_settings/edit.html.heex:2
+msgid "Settings"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_reset_password/edit.html.heex:7
+msgid "Oops, something went wrong! Please check the errors below."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_reset_password/edit.html.heex:2
+#: lib/petal_web/templates/user_reset_password/edit.html.heex:20
+msgid "Reset password"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/templates/user_reset_password/new.html.heex:9
+msgid "Send instructions to reset password"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_session_controller.ex:18
+msgid "Invalid email or password"
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_session_controller.ex:24
+msgid "Logged out successfully."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_confirmation_controller.ex:22
+msgid "If your email is in our system and it has not been confirmed yet, you will receive an email with instructions shortly."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_auth.ex:139
+msgid "You must log in to access this page."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_settings_controller.ex:28
+msgid "A link to confirm your email change has been sent to the new address."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_settings_controller.ex:62
+msgid "Email change link is invalid or it has expired."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_settings_controller.ex:57
+msgid "Email changed successfully."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_reset_password_controller.ex:24
+msgid "If your email is in our system, you will receive instructions to reset your password shortly."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_reset_password_controller.ex:41
+msgid "Password reset successfully."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_settings_controller.ex:44
+msgid "Password updated successfully."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_reset_password_controller.ex:56
+msgid "Reset password link is invalid or it has expired."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_confirmation_controller.ex:54
+msgid "User confirmation link is invalid or it has expired."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_confirmation_controller.ex:40
+msgid "User confirmed successfully."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/controllers/user_registration_controller.ex:23
+msgid "User created successfully."
+msgstr ""
+
+#, elixir-format
+#: lib/petal_web/components/hero.ex:21
+msgid "Hello %{name}!"
+msgstr ""

@@ -1,0 +1,31 @@
+<div class="auth">
+  <h1><%= gettext("Log in") %></h1>
+
+  <.form let={f} for={@conn} action={Routes.user_session_path(@conn, :create)} as={:user}>
+    <%= if @error_message do %>
+      <div class="alert alert-danger">
+        <p><%= @error_message %></p>
+      </div>
+    <% end %>
+
+    <%= label f, :email, gettext("Email") %>
+    <%= email_input f, :email, required: true %>
+
+    <%= label f, :password, gettext("Password") %>
+    <%= password_input f, :password, required: true %>
+
+    <label>
+      <%= checkbox f, :remember_me %>
+        <%= gettext("Keep me logged in for 60 days") %>
+    </label>
+
+    <div>
+      <%= submit gettext("Log in") %>
+    </div>
+  </.form>
+
+  <p>
+    <%= link gettext("Register"), to: Routes.user_registration_path(@conn, :new) %> |
+    <%= link gettext("Forgot your password?"), to: Routes.user_reset_password_path(@conn, :new) %>
+  </p>
+</div>

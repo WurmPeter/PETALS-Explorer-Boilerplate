@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <%= csrf_meta_tag() %>
+    <%= live_title_tag assigns[:page_title] || "Petal", suffix: " · Phoenix Framework" %>
+    <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}/>
+    <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
+  </head>
+ <body class="flex flex-col h-full">
+    <header class="mb-7">
+      <nav class="bg-gray-100">
+        <div class="mx-auto px-4 max-w-full">
+          <div class="flex justify-between">
+            <div class="flex space-x-4">
+              <!-- logo -->
+              <div>
+                <a href="/" class="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
+                  <svg class="h-6 w-6 mr-1 text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  </svg>
+                  <span class="font-bold">PetalWeb</span>
+                </a>
+              </div>
+
+              <!-- primary nav -->
+              <div class="hidden md:flex items-center space-x-1">
+                <div class="py-5">
+                  <a href="/sortableList" class="py-5 px-3 hover:text-gray-500"><%= gettext("Sortable List") %></a>
+                </div>
+                <div class="py-5">
+                  <a href="/sortableTable" class="py-5 px-3 hover:text-gray-500"><%= gettext("Sortable Table") %></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- secondary nav -->
+            <div class="hidden md:flex items-center space-x-1">
+            <%= if @current_user do %>
+              <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
+                <div class="py-5">
+                  <%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home), class: "hover:text-gray-500 py-5 px-3 bg-gray-200" %>
+                </div>
+              <% end %>
+              <div class="py-5">
+                <%= link @current_user.email, to: Routes.user_settings_path(@conn, :edit), class: "hover:text-gray-500 py-5 px-3" %>
+              </div>
+              <div class="py-5">
+                <%= link gettext("Log out"), to: Routes.user_session_path(@conn, :delete), method: :delete, class: "hover:text-gray-500 py-5 px-3" %>
+              </div>
+            <% else %>
+              <div class="py-5">
+                <%= link gettext("Log in"), to: Routes.user_session_path(@conn, :new), class: "hover:text-gray-500 py-5 px-3" %>
+              </div>
+              <%= link gettext("Register"), to: Routes.user_registration_path(@conn, :new), class: "py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300" %>
+            <% end %>
+            </div>
+
+            <!-- mobile button goes here -->
+            <div class="md:hidden flex items-center">
+              <button class="mobile-menu-button">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+          <a href="/sortableList" class="block py-2 px-4 text-sm hover:bg-gray-200"><%= gettext("Sortable List") %></a>
+          <a href="/sortableTable" class="block py-2 px-4 text-sm hover:bg-gray-200"><%= gettext("Sortable Table") %></a>
+          <%= if @current_user do %>
+              <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
+                  <%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home), class: "block py-2 px-4 text-sm hover:bg-gray-200" %>
+              <% end %>
+                <%= link @current_user.email, to: Routes.user_settings_path(@conn, :edit), class: "block py-2 px-4 text-sm hover:bg-gray-200" %>
+                <%= link gettext("Log out"), to: Routes.user_session_path(@conn, :delete), method: :delete, class: "block py-2 px-4 text-sm hover:bg-gray-200" %>
+            <% else %>
+                <%= link gettext("Log in"), to: Routes.user_session_path(@conn, :new), class: "block py-2 px-4 text-sm hover:bg-gray-200" %>
+              <%= link gettext("Register"), to: Routes.user_registration_path(@conn, :new), class: "block py-2 px-4 ext-sm  bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300" %>
+            <% end %>
+        </div>
+      </nav>
+    </header>
+
+    <%= @inner_content %>
+
+    <footer class="bg-gray-700 mt-auto py-3">
+      <div class="container pb-1 max-w-4xl mx-auto text-center text-gray-300 text-sm">
+        &copy; <%= DateTime.utc_now.year %> WebPetal
+      </div>
+    </footer>
+  </body>
+</html>

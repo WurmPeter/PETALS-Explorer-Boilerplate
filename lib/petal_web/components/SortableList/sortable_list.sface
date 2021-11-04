@@ -1,0 +1,11 @@
+<section class="mx-10">
+  <ul class="list-disc">
+    {#for item <- @list}
+      <li>{item}</li>
+    {/for}
+  </ul>
+  <div class="px-10">
+    <button :on-click="asc" class="px-5 font-semibold">A-Z</button>
+    <button :on-click="desc" class="x-5 font-semibold">Z-A</button>
+  </div>
+</section>
