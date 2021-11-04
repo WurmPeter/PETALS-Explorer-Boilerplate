@@ -1,4 +1,4 @@
-This is boilerplate with
+This is a boilerplate with
 
 - Phoenix 1.6.2 (incl. Auth)
 - AlpineJS
